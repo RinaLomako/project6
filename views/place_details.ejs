@@ -1,0 +1,28 @@
+<%-include('head')%>
+<%-include('header')%>
+<%-include('navbar')%>
+
+<body>
+<p>La ville de Toulon est située dans le Midi de la France
+dans le Sud-Ouest du département du Var sur le littoral méditerranéen,
+à mi-chemin entre Marseille, à l'ouest, et Saint-Tropez, à l'est.
+On la considère parfois comme la première ville à l'ouest de la Côte d'Azur
+puisque dans le livre La Côte d'Azur de Stéphen Liégeard,
+Toulon est incluse comme Marseille dans le premier chapitre
+consacré à «Hyères et le Pays des Maures ».</p>
+
+  <tbody>
+  <% for (location of locations) { %>
+        <tr>
+            <form action="/newplace/<%location.id%>"method="PUT">
+                <td><h2><%location.name%></td></h2>
+                <td><h4><%location.details%></td></h4>
+                <td><img src="<%=location.file%>" width='200'/></td>
+                <td><input type="submit" value=0
+            </form>
+        </tr>
+        <% { %>
+  </tbody>
+</body>
+
+<%-include('footer')%>
